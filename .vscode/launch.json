@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "g++ - Build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/mnt/sevenT/yinboh/project/courseWork/parallel_programming/put/put",
+            "args": ["/mnt/sevenT/yinboh/project/dataset/com-youtube.ungraph.txt.format", "/parallel"],
+            "stopAtEntry": false,
+            "cwd": "/mnt/sevenT/yinboh/project/courseWork/parallel_programming/",
+            "environment": [
+                {"name": "PATH", "value": "/mnt/sevenT/yinboh/software/mpich/mpich-3.2-software/bin:${env:PATH}"},  // 确保 mpic++ 在 PATH 中
+                {"name": "LD_LIBRARY_PATH", "value": "/mnt/sevenT/yinboh/software/mpich/mpich-3.2-software/lib:/mnt/sevenT/yinboh/software/zeromq/zeromq-4.3.4-software/lib:/mnt/sevenT/yinboh/software/hadoop/hadoop-2.10.1/lib/native:/mnt/sevenT/yinboh/software/jdk/jdk1.8.0_144/jre/lib/amd64/server"},
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // "preLaunchTask": "build mpic",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
